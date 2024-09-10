@@ -1,0 +1,38 @@
+index.html.erb
+<h1>Diary Entries</h1>
+<%= link_to 'New Entry', new_diary_path %>
+
+<!-- カレンダー表示 -->
+<div>
+  <%= month_calendar events: @diaries do |date, diaries| %>
+    <%= date %>
+    <% diaries.each do |diary| %>
+      <p><%= link_to diary.title, diary %></p>
+    <% end %>
+  <% end %>
+</div>
+
+<!-- 検索フォーム -->
+<h2>Search and Filter Entries</h2>
+<%= form_with url: diaries_path, method: :get, local: true do %>
+  <label for="sort">Sort by:</label>
+  <%= select_tag :sort, options_for_select([['Date', 'date'], ['Title', 'title']]), onchange: 'this.form.submit();' %>
+
+  <label for="tag">Filter by Tag:</label>
+  <%= text_field_tag :tag, params[:tag] %>
+  
+  <label for="search">Search:</label>
+  <%= text_field_tag :search, params[:search] %>
+  
+  <%= submit_tag 'Filter' %>
+<% end %>
+
+<!-- 日記の一覧 -->
+<h2>All Entries</h2>
+<ul>
+  <% @diaries.each do |diary| %>
+    <li>
+      <%= link_to diary.title, diary %> (<%= diary.date %> - <%= diary.tags %>)
+    </li>
+  <% end %>
+</ul>

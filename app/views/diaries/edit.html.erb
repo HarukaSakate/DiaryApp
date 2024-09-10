@@ -1,0 +1,27 @@
+edit.html.erb
+<h1>New Diary Entry</h1>
+<%= form_with model: @diary, local: true do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :date %>
+    <%= form.date_field :date, value: Date.today %>
+  </div>
+
+  <div>
+    <%= form.label :tags %>
+    <%= form.text_field :tags %>
+  </div>
+
+  <div>
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

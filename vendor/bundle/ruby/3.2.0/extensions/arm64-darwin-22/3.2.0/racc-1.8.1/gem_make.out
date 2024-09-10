@@ -1,0 +1,19 @@
+current directory: /Users/harukasakate/Documents/Ruby/DiaryApp/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+/Users/harukasakate/.rbenv/versions/3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/harukasakate/Documents/Ruby/DiaryApp/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240910-17176-y0wllh sitelibdir\=./.gem.20240910-17176-y0wllh clean
+
+current directory: /Users/harukasakate/Documents/Ruby/DiaryApp/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240910-17176-y0wllh sitelibdir\=./.gem.20240910-17176-y0wllh
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.2'
+
+current directory: /Users/harukasakate/Documents/Ruby/DiaryApp/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240910-17176-y0wllh sitelibdir\=./.gem.20240910-17176-y0wllh install
+/opt/homebrew/bin/ginstall -c -m 0755 cparse.bundle ./.gem.20240910-17176-y0wllh/racc
+
+current directory: /Users/harukasakate/Documents/Ruby/DiaryApp/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240910-17176-y0wllh sitelibdir\=./.gem.20240910-17176-y0wllh clean
